@@ -21,7 +21,7 @@ import javax.swing.Timer;
 public class BouncingBall extends JFrame {
 	private static final int WIDTH = 400;
 	private static final int HEIGHT = 400;
-	private static final int UPDATETIME = 5;
+	private static final int UPDATETIME = 1;
 	private DrawingCanvas canvas;
 	int x = 50, y = 50;
 	int size = 50;
@@ -110,7 +110,7 @@ public class BouncingBall extends JFrame {
 			g.fillOval(x, y, size, size);
 			//Mouse trail
 			g.setColor(Color.RED);
-			g.fill3DRect(mouseX-10, mouseY-10, 20, 20,true);
+			g.fillOval(mouseX-10, mouseY-10, 20, 20);
 		}
 	}
 }
